@@ -1,8 +1,18 @@
 '''
-Bài 4: Nhập một số tiền bằng VNĐ từ bàn phím. Chuyển đổi số tiền đó sang USD (tỷ
-giá 1 USD = 24.500 VNĐ) và in kết quả, làm tròn đến 2 chữ số thập phân.
+Bài 4: Viết chương trình nhập vào n, tìm tất cả các số nguyên tố nhỏ hơn n
 '''
-abc = float(input("Nhập số tiền cần đổi: "))
-xyz = (abc / 24500)
-c = " %.2f " %(xyz)
-print(c)
+n = int(input("Nhập n: "))
+li = 0
+
+if n <= 1:
+    print(f"{n} không phải số nguyên tố!")
+
+else:
+    for i in range(4,n):
+        for u in range (2,i):
+            if(i%u==0):
+                li += 1
+        if li == 0:
+            print(i)
+        else:
+            li = 0
