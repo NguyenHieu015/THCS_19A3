@@ -1,11 +1,11 @@
 '''
-Bài 2: Viết chương trình nhập vào 2 số bất kì, tìm ước chung lớn nhất của 2 số đó
+Bài 2: Nhập tổng số kẹo và số học sinh từ bàn phím. Tính số kẹo mỗi học sinh nhận
+được và số kẹo còn thừa (biết số kẹo mỗi học sinh nhận đều như nhau).
 '''
-a, b = map(int, input("Nhập 2 số bất kì: ").split(" "))
+so_keo, so_hs = map(int, input("Tổng số kẹo và số học sinh là: ").split(","))
 
-x, y = a, b 
+keo_tren_hs = so_keo // so_hs
 
-while b != 0:
-    a, b = b, a % b
+keo_con_lai = so_keo % so_hs
 
-print(f"UCLN của {x} và {y} là: {a}")
+print("Mỗi học sinh sẽ nhận được ", keo_tren_hs, "cái kẹo và còn dư ", keo_con_lai)
